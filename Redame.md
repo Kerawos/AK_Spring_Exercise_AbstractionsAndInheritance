@@ -17,3 +17,7 @@ Tywin -> Tyrion
 Tywin -> Jaime -> Joffrey & Tommen
 
 Tywin -> Joffrey & Tommen
+
+Second part will depend on ged rid of unnecessary code in case of inheritance. 
+Remember that child inherit everything from parent and it is necessary to type 
+same kode again there.
