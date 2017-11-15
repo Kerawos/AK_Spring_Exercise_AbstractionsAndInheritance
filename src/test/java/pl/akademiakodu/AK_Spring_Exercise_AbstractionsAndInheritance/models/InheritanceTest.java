@@ -46,5 +46,7 @@ public class InheritanceTest {
         ancestorName = "Aerys";
         descendantName = "Jon";
         assertEquals(inheritance.isDescendant(ancestorName, descendantName), descendantName + " inheritance from " + ancestorName);
+
+        assertTrue(inheritance.bonusTest());
     }
 }

@@ -23,10 +23,19 @@ public class IndexController {
     @PostMapping("/") public String postGOTInheritance(@ModelAttribute UserInputModel userInputModel, Model model){
         model.addAttribute("list", inheritance.getHeroesNames());
         model.addAttribute("message", inheritance.isDescendant(userInputModel.getAncestor(), userInputModel.getDescendant()));
+        if (inheritance.bonusTest()){
+            model.addAttribute("bonus", "Congratulations, you done exercise correct! you can go to the page '../bonus' ");
+        }
         return "gotInheritance";
     }
 
     @GetMapping("/desc") public String getGOTDesc(){
         return "gotDesc";
     }
+
+    @GetMapping("/bonus") public String getGOTThink(){
+        return "gotThink";
+    }
+
+
 }

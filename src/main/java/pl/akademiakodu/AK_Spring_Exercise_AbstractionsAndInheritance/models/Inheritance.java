@@ -78,28 +78,25 @@ public class Inheritance {
         return sb.toString();
     }
 
+    public boolean bTest(String ancestorName, String descendantName){
+        if (isDescendant(ancestorName, descendantName).equals(descendantName + " inheritance from " + ancestorName)){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean bonusTest(){
+        boolean b = false;
+        b = bTest("Aerys", "Rhaegar");
+        b = bTest("Aerys", "Jon");
+        b = bTest("Rhaegar", "Jon");
+        b = bTest("Eddard", "Rob");
+        b = bTest("Tywin", "Tyrion");
+        b = bTest("Tywin", "Jaime");
+        b = bTest("Tywin", "Tommen");
+        b = bTest("Tywin", "Joffrey");
+        b = bTest("Jaime", "Joffrey");
+        b = bTest("Jaime", "Tommen");
+        return b;
+    }
 }
-
-/*
-        Eddard eddard = new Eddard();
-        Rob rob = new Rob();
-        Tywin tywin = new Tywin();
-        Tyrion tyrion = new Tyrion();
-        Jaime jaimie = new Jaime();
-        Joffrey joffrey = new Joffrey();
-        Tommen tommen = new Tommen();
-        Aerys aerys = new Aerys();
-        Rhaegar rhaegar = new Rhaegar();
-        Jon jon = new Jon();
-
-    Human eddard = new Eddard();
-    Stark rob = new Rob();
-    Human tywin = new Tywin();
-    Tywin tyrion = new Tyrion();
-    Lannister jaimie = new Jaime();
-    Jaime joffrey = new Joffrey();
-    Tywin tommen = new Tommen();
-    Human aerys = new Aerys();
-    Targaryen rhaegar = new Rhaegar();
-    Rhaegar jon = new Jon();
- */
